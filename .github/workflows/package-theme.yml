@@ -16,14 +16,14 @@ jobs:
 
       - name: Prepare clean zip folder
         run: |
-          mkdir cso-master-child-head-office
+          mkdir alpha-1m
           shopt -s extglob
-          cp -r !(cso-master-child-head-office|.git|.github) cso-master-child-head-office/
-          zip -r cso-master-child-head-office.zip cso-master-child-head-office
+          cp -r !(alpha-1m|.git|.github) alpha-1m/
+          zip -r alpha-1m.zip alpha-1m
 
       - name: Create Release and Upload Asset
         uses: softprops/action-gh-release@v1
         with:
-          files: cso-master-child-head-office.zip
+          files: alpha-1m.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
