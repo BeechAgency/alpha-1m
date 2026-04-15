@@ -1,0 +1,23 @@
+<header id="masthead" class="site-header">
+    <nav id="siteNavigation" class="site-navigation flex-row container has-gutter">
+        <a href="/" class="bfc-logo__wrap" title="bfc - Home Page">
+            <svg xmlns="http://www.w3.org/2000/svg" width="62" height="56" viewBox="0 0 62 56" fill="none">
+                <path d="M9.46484 37.0141C4.23725 37.0141 0.00164235 41.2642 0 46.5076C0 51.7502 4.23725 56.0011 9.46484 56.0011C14.6924 56.0011 18.9321 51.751 18.9321 46.5076C18.9321 41.2642 14.6933 37.0141 9.46484 37.0141Z" fill="#E42312"/>
+                <path d="M54.8708 7.67601C45.0126 -2.21371 31.2235 -2.57118 21.9344 6.74362L20.7198 7.96182L32.5809 19.858C37.1523 15.4143 40.0823 14.9135 43.1543 17.9949C45.5841 20.4312 45.4413 23.1543 42.8693 25.7348C40.7967 27.8129 37.7239 28.6012 31.3655 28.5295C21.9344 28.242 17.0763 29.5327 13.5042 33.2598L24.5777 44.3669C26.9361 42.4321 29.5072 42.0021 36.7237 42.2171C43.0829 42.4321 45.0126 42.3596 48.0846 41.5722C51.2987 40.784 54.3001 39.0633 56.5854 36.7711C64.2305 29.1028 63.5153 16.3475 54.8708 7.67601Z" fill="#E42312"/>
+            </svg>
+        </a>
+        <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'header',
+                'menu_id'        => 'header-menu',
+                'container_class'=> 'main-navigation__wrap span-7',
+                'container_id' => 'headerMenu',
+                //'walker' => new bfc_Mega_Menu()
+            )
+        );
+        ?>
+
+       
+    </nav><!-- #site-navigation -->
+</header><!-- #masthead -->

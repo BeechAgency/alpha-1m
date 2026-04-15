@@ -1,0 +1,76 @@
+// Define breakpoints
+$breakpoints: (
+    xl: 1240px,
+    lg: 1024px,
+    md: 768px,
+    sm: 480px,
+);
+
+// Mixin for media queries (desktop down)
+@mixin respond_to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    @else {
+        @error "Breakpoint '#{$breakpoint}' not found in $breakpoints map.";
+    }
+}
+
+/**
+Container queries
+**/
+@mixin respond_container($max-width, $name: null) {
+    @if $name {
+        @container #{$name} (max-width: #{$max-width}) {
+            @content;
+        }
+    }
+
+    @else {
+        @container (max-width: #{$max-width}) {
+            @content;
+        }
+    } 
+}
+
+/* Gradients */
+// First, define the gradient names
+$gradients: 1, 2, 3, 4, 5, 6, 7;
+
+@mixin generate-gradients {
+    @each $i in $gradients {
+        .bg-gradient-#{$i} {
+            background: var(--gradient-#{$i});
+        }
+
+        .hover\:bg-gradient-#{$i}:hover {
+            background: var(--gradient-#{$i});
+        }
+
+        .focus\:bg-gradient-#{$i}:focus {
+            background: var(--gradient-#{$i});
+        }
+
+        .text-gradient-#{$i} {
+            background: var(--gradient-#{$i});
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+        }
+
+        .hover\:text-gradient-#{$i}:hover {
+            background: var(--gradient-#{$i});
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+        }
+    }
+}
+
+// Usage:
+@include generate-gradients;

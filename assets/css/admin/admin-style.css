@@ -1,0 +1,8 @@
+#adminmenu .wp-menu-image img {
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+#adminmenu .menu-icon-donate .wp-menu-image::before { content : '\f18e'; }

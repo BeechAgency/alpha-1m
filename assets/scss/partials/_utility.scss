@@ -1,0 +1,50 @@
+
+// Colours
+
+// Array of colors
+
+
+
+$colors: (
+    black: #000000,
+    white: #ffffff,
+    red: #E42312,
+    off-black : #191919
+);
+
+// Generate colour classes
+@each $name, $value in $colors {
+    .bg-#{$name} { background-color: $value; }
+    .text-#{$name} { color: $value; }
+}
+
+
+// Aspect Ratios
+img[class*="aspect:"],
+[class*="aspect:"]:not(img) img { 
+    object-fit: cover; 
+    width: 100%; 
+    height: 100%;
+}
+[class*="aspect:"]:not(img) img {
+    aspect-ratio: inherit;
+}
+
+
+.aspect\:21\/9 { 
+    aspect-ratio: 21 / 9; 
+    
+    @include respond_to(sm) {
+        aspect-ratio: 16 / 9;
+    }
+}
+.aspect\:16\/9 { aspect-ratio: 16 / 9; }
+.aspect\:6\/4, .aspect\:3\/2 { aspect-ratio: 6 / 4; }
+.aspect\:4\/5 { aspect-ratio: 4 / 5; }
+.aspect\:4\/3 { aspect-ratio: 4 / 3; }
+.aspect\:3\/4 { aspect-ratio: 3 / 4; }
+.aspect\:1\/1 { aspect-ratio: 1 / 1; }
+
+//.z\:bg { z-index: var(--z-bg); &.rel { position: relative; } }
+//.z\:fg { z-index: var(--z-fg); &.rel { position: relative; } }
+.z\:mg { z-index: var(--z-mg); &.rel { position: relative; } }

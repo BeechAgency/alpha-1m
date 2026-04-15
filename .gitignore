@@ -1,0 +1,59 @@
+# WordPress core files
+/wp-admin/
+/wp-includes/
+
+# WordPress content directories
+/wp-content/languages/
+/wp-content/upgrade/
+/wp-content/uploads/
+/wp-content/backup-*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Composer dependencies
+/vendor/
+
+# Node modules
+/node_modules/
+
+# Sass/CSS cache
+.sass-cache/
+*.css.map
+
+# Grunt / Gulp
+.grunt/
+.gulp/
+
+# Bower
+/bower_components/
+
+# Misc
+*.swp
+*.swo
+*.bak
+*.orig
+*.save
+*.tmp
+*.temp
+*.gz
+*.zip
+*.tar
+*.rar
+*.7z
+*.tgz
+*.log
+*.lock
+*.cache
+*.pid
+*.seed
+*.pid.lock
+*.coverdata
+*.coverrun
+*.covercache

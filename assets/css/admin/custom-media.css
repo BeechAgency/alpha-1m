@@ -1,0 +1,21 @@
+.focal-point {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.image-editor { position: relative; }
+.image-editor img { display: block;}
+
+.image-editor + .field-row {
+    display: flex;
+    gap: 15px;
+}
+
+
+.post-type-attachment:not(.modal-open) .compat-field-focal_point .image-editor {
+    display: none;
+}

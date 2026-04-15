@@ -1,0 +1,110 @@
+:root {
+
+    // Colours
+    --color-orange: #E08546ff;
+    --color-brown: #C69E8Bff;
+    --color-teal: #37848Eff;
+    --color-green: #0D8291ff;
+    --color-current: #16656Fff;
+
+    --color-off-black: #191919;
+    --color-black : #000000;
+    --color-white : #FFFFFF;
+    --color-red: #E42312;
+
+    --color-error: #E30000;
+    --color-error-bg: #FFF2F4;
+
+    --gradient-1 : linear-gradient(180deg, #ED693C 1.33%, #41B36E 49.04%, #E4BC81 96.75%);
+    --gradient-2 : linear-gradient(180deg, #E4BC81 1.82%, #7967C3 49.82%, #6F4494 97.83%);
+    --gradient-3: linear-gradient(180deg, #D6D6D6 0.89%, #45C2E2 50.41%, #E4BC81 97.99%);
+    --gradient-4 :linear-gradient(180deg, #6D5DCA 0%, #6F4494 50%, #ED693C 100%);
+    --gradient-5 :linear-gradient(180deg, #FBA5E4 1.9%, #7A64CC 55.37%, #41B36E 97.39%);  
+    --gradient-6 :linear-gradient(180deg, #E4BC81 2.51%, #ED693C 55.51%, #F8A91F 97.15%);
+    --gradient-7 :linear-gradient(180deg, #41B36E 3.06%, #45C2E2 50.92%, #FBA5E4 96.89%);
+
+    // Fluid type stater
+    --text-root : 16px;
+
+    // Type
+    --font-poppins : 'Poppins', sans-serif;
+    --font-instrument : 'Instrument Serif', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    --font-headings: 'Instrument Serif', sans-serif;
+    --font-heading-weight : 700;
+
+    
+    --text-7xl : clamp(6rem, 1.35rem + 6vw, 7.5rem); // 7.5rem; // 120
+    --text-6xl : clamp(5.625rem, 1.3625rem + 5.5vw, 7rem); //7rem; // 112
+    --text-5xl: clamp(5rem, 1.9rem + 4vw, 6rem); //6rem; // 96
+    --text-4xl: clamp(3.75rem, 1.425rem + 3vw, 4.5rem); //4.5rem; // 72
+    --text-3xl: clamp(2.5rem, 0.95rem + 2vw, 3rem); //3rem; // 48
+    --text-2xl: clamp(2rem, 1.225rem + 1vw, 2.25rem); //2.25rem; // 36
+    --text-xl: clamp(1.25rem, 0.475rem + 1vw, 1.5rem); //1.5rem; // 24
+    --text-lg: clamp(1.125rem, 0.7375rem + 0.5vw, 1.25rem); //1.25rem; // 20
+    --text-base: clamp(1rem, 0.6125rem + 0.5vw, 1.125rem); //1rem; // 16px
+    --text-sm: clamp(0.875rem, 0.4875rem + 0.5vw, 1rem); //0.875rem; // 14px
+
+    --text-church-names : clamp(1.75rem, 1.2143rem + 2.6786vw, 2.5rem);
+
+    /** Font sizes 
+    7.5
+    7
+    6 - title
+    4.5
+    3
+    2.25
+
+    1.5
+    1.25
+    1
+    0.875
+    */
+
+
+    // Templated Easing
+    --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+    --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+
+    --gutter : 2rem;
+
+    // Grid
+    --grid-columns : 12;
+    --grid-col-gap: 1.5rem;
+    --grid-row-gap: 3rem;
+
+    // Z Indexes
+
+    --z-noise : 50;
+    --z-bg : 1;
+    --z-mg: 100;
+    --z-fg : 150; 
+
+    // Widths
+    --max-width: 1680px;
+    --max-width-content: 60rem;
+    --max-width-narrow : 40rem;
+    --max-width-narrowest : 28rem;
+}
+
+@include respond_to(md) {
+    :root {
+        --gutter : 1.5rem;
+
+        --text-7xl: clamp(4rem, 2.8084rem + 5.6075vw, 5.5rem);
+        --text-6xl: clamp(3rem, 2.2056rem + 3.7383vw, 4rem);
+        --text-5xl: clamp(3rem, 2.2056rem + 3.7383vw, 4rem);
+        //--text-4xl: clamp(3.75rem, 1.425rem + 3vw, 4.5rem); //4.5rem; // 72
+        --text-3xl: clamp(2rem, 1.2056rem + 3.7383vw, 3rem);
+        //--text-2xl: clamp(2rem, 1.225rem + 1vw, 2.25rem); //2.25rem; // 36
+        --text-xl: clamp(1.25rem, 0.475rem + 1vw, 1.5rem); //1.5rem; // 24
+        --text-lg: clamp(1.125rem, 0.7375rem + 0.5vw, 1.25rem); //1.25rem; // 20
+    }
+}
+
+
+@include respond_to(sm) {
+    :root {
+        --gutter : 1rem;
+    }
+}

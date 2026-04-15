@@ -1,0 +1,3 @@
+<?php
+    // Silence is deafening...
+    // We don't really use a sidebar.

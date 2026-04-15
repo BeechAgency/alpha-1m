@@ -1,0 +1,43 @@
+@import 'partials/reset';
+@import 'partials/mixins';
+@import 'partials/variables';
+@import 'partials/utility';
+@import 'partials/layout';
+
+@import 'partials/typography';
+
+// Vendors
+@import 'vendor/locomotive-scroll';
+
+// Theme Styles
+@import 'partials/base';
+@import 'partials/nav';
+
+@import 'partials/header';
+@import 'partials/footer';
+
+// Sections
+@import 'sections/cards';
+@import 'sections/churches';
+@import 'sections/form';
+@import 'sections/gallery';
+@import 'sections/stories';
+
+
+.beech-attr { 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 80%;
+
+    scale: 0.9;
+
+    padding-right: var(--gutter);
+
+    opacity: 0.5;
+    transition: opacity 250ms ease;
+    &:hover { opacity: 1; }
+    #beechLogo { height: 0.8rem; margin-bottom:0.1rem; }
+}
