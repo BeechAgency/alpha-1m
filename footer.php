@@ -150,7 +150,7 @@
 		</div>
 		<a class="beech-attr" href="https://beech.agency/?utm_medium=referral&utm_source=alpha1m&utm_campaign=Alpha1m%20attr%20link">
 			Site by <span class="sr-only">Beech Agency</span>
-			<svg id="beechLogo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.26 134.76">
+			<svg id="beechLogo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.26 134.76" style="height: 0.8rem;">
 				<defs>
 					<style>
 					.logo-letter {
