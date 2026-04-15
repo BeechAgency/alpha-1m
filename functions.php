@@ -278,8 +278,8 @@ require get_stylesheet_directory().'/inc/updater.php';
 
 $updater = new Alpha_Theme_Updater( __FILE__ );
 $updater->set_username( 'BeechAgency' );
-$updater->set_repository( 'cso-master-child-head-office' );
-$updater->set_theme('cso-master-child-head-office'); 
+$updater->set_repository( 'alpha-1m' );
+$updater->set_theme('alpha-1m'); 
 
 if( $update_key ) {
     $updater->authorize($update_key);    
