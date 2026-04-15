@@ -148,16 +148,25 @@ class Alpha_Theme_Updater {
         $checked = $transient->checked;
         $this->get_repository_info();
         
-        if( empty($this->github_response) || !isset($this->github_response->tag_name) ) { 
-            return $transient; 
+        if( empty($this->github_response) || !isset($this->github_response->tag_name) ) {
+            return $transient;
         }
 
-        $github_version = filter_var($this->github_response->tag_name, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+        $tag_name = trim( $this->github_response->tag_name );
+        if ( preg_match( '/^v?(\d+(?:\.\d+)*)/', $tag_name, $matches ) ) {
+            $github_version = $matches[1];
+        } else {
+            $github_version = preg_replace( '/[^0-9\.]/', '', $tag_name );
+        }
 
-        $out_of_date = version_compare( 
-            $github_version, 
-            $checked[ $this->theme ], 
-            'gt' 
+        if ( empty( $github_version ) ) {
+            return $transient;
+        }
+
+        $out_of_date = version_compare(
+            $github_version,
+            $checked[ $this->theme ],
+            'gt'
         );
 
         if( !$out_of_date )  {
